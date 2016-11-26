@@ -1,2 +1,3 @@
-# blog
-blog
+https://shinkamishiro.github.io/
+
+

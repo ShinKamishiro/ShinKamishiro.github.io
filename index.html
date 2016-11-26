@@ -5,44 +5,69 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"/>
+    <link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" /> <!-- Google日本語フォント  Rounded M+ 1c -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100i" rel="stylesheet"> <!-- GoogleFont 'Josefin Sans' - https://fonts.google.com/specimen/Josefin+Sans?selection.family=Josefin+Sans:100i,400 -->
+
     <script
       src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
       integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
       crossorigin="anonymous">
     </script>
-    <title>Shin's Blog</title>
+    
+    <title>Shin's Site</title> <!-- Tab Name -->
+    
     <style type="text/css"> 
         /* for reset */
         * { padding: 0; margin: 0; border: 0; box-sizing: border-box; }
+        body{
+            font-family: 'Josefin Sans', "Rounded Mplus 1c";
+            font-weight: 100;
+        }
 
         .menu_ul, .title, .title figure, section { 
             display: flex; justify-content: center; align-items: center; }
+        .flex_column{
+            flex-direction: column;
+        }
 
-        .menu_nav{ background-color:  rgba(0,0,0,.6); 
+        .menu_nav{ 
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,0e0e0e+100&0.4+0,0.4+0,0.3+100 */
+            background: -moz-linear-gradient(top,  rgba(0,0,0,0.4) 0%, rgba(14,14,14,0.3) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  rgba(0,0,0,0.4) 0%,rgba(14,14,14,0.3) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  rgba(0,0,0,0.4) 0%,rgba(14,14,14,0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66000000', endColorstr='#4d0e0e0e',GradientType=0 ); /* IE6-9 */
+
             width: 100vw; 
-            position: fixed; top: 0; left: 0; 
+            position: fixed; top: 0; left: 0; /* 固定 */
             transition: .3s; /* ゆっくり表示・非表示の動き */
         }
         .menu_li{ display: inline-block; }
-        .menu_line{ border-right: 0.1px solid #eee ; }
+        .menu_line{
+            width: 1px;
+            height: 2em;
+/*            border-left: 1px solid #eee;*/
+            background-image: linear-gradient(to bottom, rgba(238,238,238,0.3), rgba(238,238,238,0.5), rgba(238,238,238,0.3)); 
+            /* Ref: http://coliss.com/articles/build-websites/operation/css/css-simple-styles-for-horizontal-rules-by-css-tricks.html */
+        }
+
         .menu_a { display: block;
             width: 20vw; /* ナビメニュー数に応じて変更 */
             padding-top: 40px; padding-bottom: 40px;
             text-align: center;
             color: #fff;
             text-decoration: none;
-            font-size: 2em;
+            font-size: 3em; /* NaviMenu FontSize */
         }
         
         .title{
-            margin-top: 150px;
+            height: 100vw;
             font-size: 8vw;
         }
         .title figure         { flex-direction: column; }
         .title .img_shin_icon { width: 30vw; }
         .title figcaption     { margin-top: 3vw; }
         
-        section{ margin: 20vw 0 30vw; font-size: 5vw; }
+        section{ height: 100vw; font-size: 5vw; }
         
     </style>
     
@@ -51,40 +76,44 @@
 	<nav class="menu_nav">
 		<ul class="menu_ul">
 			<li class="menu_li">
-			    <a href="https://shinkamishiro.github.io/" class="menu_a"><div class="menu_line">Top</div></a>
+			    <a href="https://shinkamishiro.github.io/" class="menu_a">Top</a>
             </li>
+            <hr class="menu_line">
 			<li class="menu_li">
-			    <a href="https://shinkamishiro.github.io/blog.html" class="menu_a"><div class="menu_line">Blog</div></a>
+			    <a href="https://shinkamishiro.github.io/blog.html" class="menu_a">Blog</a>
             </li>
+            <hr class="menu_line">
 			<li class="menu_li">
-			    <a href="https://shinkamishiro.github.io/profile.html" class="menu_a"><div class="menu_line">Profile</div></a>
+                <a href="https://shinkamishiro.github.io/profile.html" class="menu_a">Profile</a>
             </li>
+            <hr class="menu_line">
             <li class="menu_li">
 			    <a href="https://shinkamishiro.github.io/works.html" class="menu_a">Works</a>
             </li>
-<!--
-			<li class="menu_li"><a href="" class="menu_a">menu3</a></li>
-			<li class="menu_li"><a href="" class="menu_a">menu4</a></li>
-			<li class="menu_li"><a href="" class="menu_a">menu5</a></li>
--->
+
 		</ul>
 	</nav>   
-    
+
+
 	<h1 class="title">
 	    <figure>
             <img class="img_shin_icon" src="img/shin_icon.jpg" alt="shin icon">
-            <figcaption>Shin</figcaption>
+            <figcaption>Shin's Site</figcaption>
 	    </figure>
     </h1>
-	
-	<section>
-	    <p>Sorry, It's Editing</p>
+
+
+	<section class="flex_column">
+	    <p>Sorry, It's Editing. <br>
+	    <br>
+	    申し訳ありません。<br>
+	    ただいま編集中です。</p>
 	</section>
-	
-	
-	
-	
-	
+
+
+
+
+<!-- for Navi Hidden -->
 	<script>
         var menuHeight = $(".menu_nav").height();
         var startPos = 0;
