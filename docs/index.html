@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"/>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+      integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+      crossorigin="anonymous">
+    </script>
+    <title>Shin's Blog</title>
+    <style type="text/css"> 
+        /* for reset */
+        * { padding: 0; margin: 0; border: 0; box-sizing: border-box; }
+
+        .menu_ul, .title, .title figure, section { 
+            display: flex; justify-content: center; align-items: center; }
+
+        .menu_nav{ background-color:  rgba(0,0,0,.6); 
+            width: 100vw; 
+            position: fixed; top: 0; left: 0; 
+            transition: .3s; /* ゆっくり表示・非表示の動き */
+        }
+        .menu_li{ display: inline-block; }
+        .menu_line{ border-right: 0.1px solid #eee ; }
+        .menu_a { display: block;
+            width: 20vw; /* ナビメニュー数に応じて変更 */
+            padding-top: 40px; padding-bottom: 40px;
+            text-align: center;
+            color: #fff;
+            text-decoration: none;
+            font-size: 2em;
+        }
+        
+        .title{
+            margin-top: 150px;
+            font-size: 8vw;
+        }
+        .title figure         { flex-direction: column; }
+        .title .img_shin_icon { width: 30vw; }
+        .title figcaption     { margin-top: 3vw; }
+        
+        section{ margin: 20vw 0 30vw; font-size: 5vw; }
+        
+    </style>
+    
+</head>
+<body>
+	<nav class="menu_nav">
+		<ul class="menu_ul">
+			<li class="menu_li">
+			    <a href="https://shinkamishiro.github.io/" class="menu_a"><div class="menu_line">Top</div></a>
+            </li>
+			<li class="menu_li">
+			    <a href="https://shinkamishiro.github.io/blog.html" class="menu_a"><div class="menu_line">Blog</div></a>
+            </li>
+			<li class="menu_li">
+			    <a href="https://shinkamishiro.github.io/profile.html" class="menu_a"><div class="menu_line">Profile</div></a>
+            </li>
+            <li class="menu_li">
+			    <a href="https://shinkamishiro.github.io/works.html" class="menu_a">Works</a>
+            </li>
+<!--
+			<li class="menu_li"><a href="" class="menu_a">menu3</a></li>
+			<li class="menu_li"><a href="" class="menu_a">menu4</a></li>
+			<li class="menu_li"><a href="" class="menu_a">menu5</a></li>
+-->
+		</ul>
+	</nav>   
+    
+	<h1 class="title">
+	    <figure>
+            <img class="img_shin_icon" src="img/shin_icon.jpg" alt="shin icon">
+            <figcaption>Shin</figcaption>
+	    </figure>
+    </h1>
+	
+	<section>
+	    <p>Sorry, It's Editing</p>
+	</section>
+	
+	
+	
+	
+	
+	<script>
+        var menuHeight = $(".menu_nav").height();
+        var startPos = 0;
+        $(window).scroll(function(){
+          var currentPos = $(this).scrollTop();
+          if (currentPos > startPos) {
+            if($(window).scrollTop() >= 200) {
+              $(".menu_nav").css("top", "-" + menuHeight + "px");
+            }
+          } else {
+            $(".menu_nav").css("top", 0 + "px");
+          }
+          startPos = currentPos;
+        });
+    </script>
+    
+    
+</body>
+</html>

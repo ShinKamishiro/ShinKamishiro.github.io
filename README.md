@@ -1,1 +1,2 @@
-# shinkamishiro.github.io
+# blog
+blog
